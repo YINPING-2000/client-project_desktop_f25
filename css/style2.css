@@ -1,0 +1,62 @@
+/* .skip to main */
+.skip{
+    top:-40px;
+    height:40px;
+    position:absolute;
+    background-color: darkblue;
+}
+
+.skip:focus{
+    top:25px;
+    background:#fff;
+    border: 2px solid #00274C;
+    padding: 5rem, 2rem;
+}
+/* padding?没生效? */
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color:#1a1a1a;
+    background: #fff;
+}
+
+p{
+    margin-block:1rem;
+}
+
+ul,ol{
+    margin-block:1rem;
+    padding-left: 1.5rem;
+}
+
+li{
+    margin-bottom: 0.5rem;
+    /* line-height: 1.6; */
+}
+
+main{
+    padding: 1rem;
+    /* margin-inline:auto; */
+    max-width:68ch;
+}
+
+a {
+    color:#6b5400;
+    
+
+}
+
+
+
+:root{
+  --space-1:.5rem; --space-2:1rem; --space-3:1.5rem;
+  --radius:20px;
+  --max-text:68ch;                
+  --brand:#00274C;        
+  --accent:#6b5400;                
+  --ink:#111; --ink-muted:#475569; 
+  --surface:#fff; --surface-2:#f6f7fb;
+  --line:#8fb1f4;
+  --brand2:#fff8dc;             
+}
