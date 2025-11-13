@@ -3,17 +3,19 @@
     top:-40px;
     height:40px;
     position:absolute;
-    background-color: darkblue;
+    background-color: rgb(255, 255, 255);
 }
 
 .skip:focus{
     top:25px;
     background:#fff;
-    border: 2px solid #00274C;
-    padding: 5rem, 2rem;
+    border: 2px solid #8ac6ff;
+    padding: 0.5rem; 
 }
-/* padding?没生效? */
+/* padding?没生效? 生效了 */
 
+
+/* !!!!!!!!!!!!!!!!!!!改掉了var!!!!!!!!!!!!!!!!!!!!!!! */
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.6;
@@ -37,19 +39,314 @@ li{
 
 main{
     padding: 1rem;
-    /* margin-inline:auto; */
+    margin-inline:auto;
     max-width:68ch;
 }
 
 a {
-    color:#6b5400;
-    
+    color:#836700;
+    font-weight: 600;
+    text-decoration:underline;
+}
 
+nav a{
+    color:#fff;
+}
+
+a:hover{
+    color:#00274C;
+    background-color: #fff3c6;
+    transition: all 0.3s ease;
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible{
+    outline:3px solid #1d4ed8;
+    outline-offset: 2px;
+}
+/* 为什么不显示？ */
+
+/* headings */
+h1,h2,h3,h4{
+    font-family:"Segoe UI Semibold", Roboto, Arial, sans-serif;
+    /* font-weight: 600; */
+    line-height:1.3;
+    color:#00274C;
+}
+
+h1{
+    font-size:1.8rem;
+    margin-top:1.5rem;
+    margin-bottom: 1rem;
+    text-align:center;
+}
+
+h2{
+    line-height:1.2;
+    margin-top:1rem;
+    margin-bottom: 0.5rem;
+    text-align:center;
+    font-size:1.5rem;
+    color:#00274C;
+}
+
+h3{
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem; 
+}
+
+h4{
+    font-size:1.1rem;
+    margin-top:1rem;
+    margin-bottom: 0.3rem;
+}
+
+strong {
+  font-weight: 600;
+  color: #00274C;
+}
+
+
+/* header+nav */
+.site-header {
+    border-bottom:5px solid #8fb1f4;
+    background:#00274C;
+}
+
+.brand-row{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:2rem;
+    padding:1rem;
+    background-color:#3263c6;
+}
+/* 为什么要用flex */
+/* 解决了:单行排列,让元素居中,经常使用flex */
+/*!!!!!!!!!!!!!改了颜色!!!!!!!!!!!!!!!!!!!! */
+
+.brand{
+    /* display:flex;
+    justify-content:center;
+    align-items:center; */
+    width:54px;
+    height:auto;
+}
+
+.site-title{
+    /* display:flex;
+    justify-content: center; */
+    font-size:1.1rem;
+    /* margin:0; */
+    color:#fff;
+}
+
+/* .primary-nav ul{
+    list-style: square inside url("https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/Block_M-Hex.png")
+} */
+
+.primary-nav{
+    padding:0.5rem 0rem;
+}
+
+@media screen and (min-width:768px){
+.primary-nav ul {
+  list-style: none;
+  margin:0;
+  padding:0.5rem 1rem;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:0.5rem 0.6rem;
+  overflow:auto;
+}
+.primary-nav a{
+    display:block;
+    padding:0.6rem 0.9rem;
+    border-radius:999px;
+    background:#00274C;
+    color:#fff;
+    border:2px solid #fff;
+    line-height:1;
+    white-space:nowrap;
+}
+
+.primary-nav a[aria-current="page"]{
+  font-weight:700; 
+  outline:2px solid currentColor;
+}
+
+.primary-nav li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.primary-nav li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/Block_M-Hex.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 }
 
 
 
-:root{
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* 版心与标题 */
+section > h2{
+  margin-top:1rem; 
+  font-size: 1.5rem; 
+  text-align:center;
+}
+
+aside{
+    margin-top:1rem;
+}
+
+section>h3{
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  font-size:1.3rem; 
+  text-align:left;
+}
+
+/* 卡片 */
+.card{
+  background:#fff; 
+  border:1px solid #8fb1f4; 
+  border-radius: 20px;
+  padding: 1rem; 
+  margin-block: 1rem;
+}
+.card h3{ margin-bottom:.25rem; }
+
+/* 首页按钮格 */
+.grid-buttons{
+  display:grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.grid-buttons a{
+  display:block; 
+  padding:1rem; 
+  border-radius: 20px;
+  background:#fdfeff; 
+  border:1px solid #8fb1f4; 
+  color:#111;
+}
+
+/* resume:resources+FAQ */
+.resume-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;
+}
+
+/* 资源列表 grid*/
+.resource-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+
+.resource{
+  background:#fff; 
+  border:1px solid #8fb1f4; 
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume-grid > .card,
+.resource-grid > li.resource{
+  margin: 100;
+}
+
+
+
+/* !!!!! */
+/*小屏布局*/
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;  
+  gap: 1.5rem;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* 每个资源卡的样式 */
+.resource {
+  background: #fff;
+  border: 1px solid #8fb1f4;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/*中屏及以上：让每个 section 内的资源两列排列*/
+@media (min-width: 768px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr); /* 两列 */
+  }
+}
+
+/*大屏及以上：让 Resume Resources 和 FAQ 并排*/
+@media (min-width: 1024px) {
+  .resume-grid {
+    grid-template-columns: repeat(2, 1fr); /* 两个主区域并列 */
+    align-items: start;
+  }
+}
+
+
+/* 圆角图片 */
+.media{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;
+}
+.media-img{
+  width:100%; 
+  height:auto; 
+  border-radius: 20px;
+  display:block;
+}
+.media-body>h2{
+  text-align:left;
+  margin-top:0;
+}
+
+/* 图片视频自适应 */
+img, iframe{ max-width:100%; height:auto; border:0; }
+
+/* footer */
+.site-footer{
+  border-top:1px solid #00274C; 
+  padding: 1rem;
+  color:#475569; 
+  text-align:center; 
+  margin-top: 1.5rem;
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
+
+/* :root{
   --space-1:.5rem; --space-2:1rem; --space-3:1.5rem;
   --radius:20px;
   --max-text:68ch;                
@@ -59,4 +356,8 @@ a {
   --surface:#fff; --surface-2:#f6f7fb;
   --line:#8fb1f4;
   --brand2:#fff8dc;             
-}
+} */
+
+
+
+

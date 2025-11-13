@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Networking & Connections</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
 
@@ -115,11 +115,13 @@
 </main>
 
     <footer class="site-footer">
-      <p>University of Michigan School of Information •
+      <p>@ <span id="year"></span> • University of Michigan School of Information •
       <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a>
       </p>
     </footer>
 
 </body>
-
+<script>
+document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 </html>

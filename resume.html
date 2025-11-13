@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumes</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
 
@@ -52,10 +52,10 @@
       <li><strong>Tailor for Each Opportunity:</strong> Customize your resume for every job or internship you pursue.</li>
       <li><strong>Review and Edit:</strong> Proofread for errors, check formatting, and ask for feedback from peers or a career coach.</li>
     </ol>
-  </section>
 
 
   <div class="resume-grid">
+    
     <section class ="card" id="resume-resources">
       <h2>Resume Resources</h2>
         <ul class="resource-grid">
@@ -110,17 +110,20 @@
             Update your resume every semester, after major projects, or whenever you gain a new role or responsibility.
           </li>
         </ul>
+      </div>
     </section>
-  </div>
+
           <!-- Content taken & modified from UMGPT with the prompt, "for the same content write me some intro content and resources for a resume page" - this was after I had asked for content for the home page.
         UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
     </main>
     <footer class="site-footer">
-      <p>University of Michigan School of Information •
+      <p>@ <span id="year"></span> • University of Michigan School of Information •
       <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a>
       </p>
     </footer>
-    
-</body>
 
+</body>
+<script>
+document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 </html>
